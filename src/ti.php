@@ -26,6 +26,11 @@ function emptyblock($name) {
 	);
 }
 
+function simpleblock($name, $value=null, $filters=null) {
+  startblock($name, $filters);
+  echo $value;
+  endblock($name);
+}
 
 function startblock($name, $filters=null) {
 	$trace = _ti_callingTrace();
